@@ -20,7 +20,7 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `Ryan Turnbull`,
         start_url: `/`,
-        icon: `src/assets/svg/favicon.ico`, // This path is relative to the root of the site.
+        icon: `src/assets/favicon.ico`, // This path is relative to the root of the site.
       },
     },
     {
