@@ -57,7 +57,9 @@ const Experience = ({ data }) => {
             className="cursor-pointer -top-16 left-0 absolute"
             onClick={handleReset}
           >
-            <FadeIn delay={800}>&#8592;</FadeIn>
+            <FadeIn delay={800}>
+              <p>&#8592;</p>
+            </FadeIn>
           </div>
           <Flipped flipId={selectedExp.slug}>
             <div>
