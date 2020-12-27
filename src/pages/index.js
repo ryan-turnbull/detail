@@ -1,15 +1,14 @@
+import "./index.css"
+
 import React from "react"
 
 import SEO from "../components/seo"
+import { Layout } from "../components/layout"
 
 const IndexPage = () => (
-  <div>
+  <Layout titleContent={<h1>Coming soon!</h1>}>
     <SEO title="Home" />
-    <h1>In development</h1>
-    <p>
-      Personal website built with: Gatsby, Contentful, Netlify & TailwindCSS
-    </p>
-  </div>
+  </Layout>
 )
 
 export default IndexPage
