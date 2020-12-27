@@ -19,7 +19,7 @@ const updateSelectedUrlState = slug => {
 }
 
 const getSelectedItem = items => {
-  if (!window) {
+  if (typeof window === "undefined") {
     return
   }
   const urlParams = new URLSearchParams(window.location.search)
