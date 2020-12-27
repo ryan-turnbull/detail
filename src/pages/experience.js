@@ -19,6 +19,9 @@ const updateSelectedUrlState = slug => {
 }
 
 const getSelectedItem = items => {
+  if (!window) {
+    return
+  }
   const urlParams = new URLSearchParams(window.location.search)
   const selected = urlParams.get("selected")
 
