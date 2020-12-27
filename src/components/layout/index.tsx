@@ -4,7 +4,7 @@ import React from "react"
 
 import useScrollPosition from "@react-hook/window-scroll"
 
-import Logo from "../../images/svg/logo.svg"
+import Logo from "../../assets/svg/logo.svg"
 
 interface LayoutProps {
   children: React.ReactNode
