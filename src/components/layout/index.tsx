@@ -5,6 +5,7 @@ import React from "react"
 import useScrollPosition from "@react-hook/window-scroll"
 
 import Logo from "../../assets/svg/logo.svg"
+import { Link } from "gatsby"
 
 interface LayoutProps {
   children: React.ReactNode
@@ -18,9 +19,11 @@ const Header = () => {
 
   return (
     <header
-      className={`flex flex-row justify-between items-center w-screen fixed p-4 layout-header ${headerBackgroundClass}`}
+      className={`flex flex-row justify-between items-center w-screen fixed p-4 layout-header z-10 ${headerBackgroundClass}`}
     >
-      <Logo className="w-16 h-16" />
+      <Link to="/">
+        <Logo className="w-16 h-16" />
+      </Link>
     </header>
   )
 }
@@ -31,9 +34,11 @@ export const Layout = ({ children, titleContent }: LayoutProps) => {
       <Header />
       <main>
         <div className="layout-title-content flex justify-center items-center min-h-screen">
-          {titleContent}
+          <div className="max-w-xl w-screen text-center mx-auto relative">
+            {titleContent}
+          </div>
         </div>
-        {children}
+        <div className="layout-body-content">{children}</div>
       </main>
     </div>
   )

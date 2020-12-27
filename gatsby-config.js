@@ -24,6 +24,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `yxey0ltiqdf5`,
+        accessToken: `TV-unQfWMB3GS3oPZszDV_b0Lsal-k28OF5ZjBFNb0c`,
+      },
+    },
+    {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {

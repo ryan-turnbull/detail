@@ -17,3 +17,15 @@ h1 {
   font-weight: 700;
   font-family: Gilroy;
 }
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: Gilroy;
+}
+
+ul {
+  list-style: disc;
+  margin: 1rem 0;
+  padding-left: 1rem;
+}
