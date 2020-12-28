@@ -69,7 +69,7 @@ const Experience = ({ data, location }) => {
       return (
         <div className="flex flex-col items-center w-max max-w-full mx-auto">
           <div
-            className="cursor-pointer  absolute left-8 -top-20 sm:left-0 sm:-top-16"
+            className="cursor-pointer absolute left-6 -top-20 sm:left-0 sm:-top-16"
             onClick={handleReset}
           >
             <FadeIn delay={800}>

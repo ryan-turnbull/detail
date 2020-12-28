@@ -34,11 +34,11 @@ export const Layout = ({ children, titleContent }: LayoutProps) => {
       <Header />
       <main>
         <div className="layout-title-content flex justify-center items-center pt-48 sm:min-h-screen sm:pt-0">
-          <div className="max-w-xl w-screen text-center mx-auto relative px-8">
+          <div className="max-w-xl w-screen text-center mx-auto relative px-6">
             {titleContent}
           </div>
         </div>
-        <div className="mt-20 sm:layout-body-content px-8">{children}</div>
+        <div className="layout-body-content px-6">{children}</div>
       </main>
     </div>
   )
