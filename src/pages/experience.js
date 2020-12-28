@@ -52,19 +52,19 @@ const Experience = ({ data }) => {
     const selectedExp = experiences.find(exp => exp.slug === selectedItem)
     if (selectedExp) {
       return (
-        <div className="flex flex-col items-center w-max mx-auto">
+        <div className="flex flex-col items-center w-max max-w-full mx-auto">
           <div
-            className="cursor-pointer -top-16 left-0 absolute"
+            className="cursor-pointer  absolute left-8 -top-28 sm:left-0 sm:-top-16"
             onClick={handleReset}
           >
             <FadeIn delay={800}>
-              <p>&#8592;</p>
+              <p className="text-2xl sm:text-sm">&#8592;</p>
             </FadeIn>
           </div>
           <Flipped flipId={selectedExp.slug}>
             <div>
               <img
-                className="h-24 w-24 rounded-lg mx-6 shadow-lg"
+                className="h-24 w-24 rounded-lg mx-8 shadow-lg"
                 src={selectedExp.image.file.url}
                 alt={`${selectedExp.name} Logo`}
                 onClick={handleReset}
