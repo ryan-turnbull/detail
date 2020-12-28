@@ -7,6 +7,7 @@ import { renderRichText } from "gatsby-source-contentful/rich-text"
 import SEO from "../components/seo"
 import { Layout } from "../components/layout"
 import { format } from "date-fns"
+import { mapNodesToArray } from "../utils/data"
 
 const updateSelectedUrlState = slug => {
   const newurl =
@@ -31,9 +32,7 @@ const getSelectedItem = items => {
 
 const Experience = ({ data, location }) => {
   const experiences = useMemo(() => {
-    return data.allContentfulExperience.edges.map(item => {
-      return item.node
-    })
+    return mapNodesToArray("allContentfulExperience", data)
   }, [data])
 
   const [selectedItem, setSelectedItem] = useState(getSelectedItem(experiences))
@@ -153,7 +152,7 @@ const Experience = ({ data, location }) => {
 }
 
 export const pageQuery = graphql`
-  query MyQuery {
+  query ExperiencePageQuery {
     allContentfulExperience(sort: { fields: [endDate], order: DESC }) {
       edges {
         node {
