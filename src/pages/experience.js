@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react"
+import React, { useState, useMemo, useEffect } from "react"
 import { graphql } from "gatsby"
 import FadeIn from "react-fade-in"
 import { Flipper, Flipped } from "react-flip-toolkit"
@@ -29,7 +29,7 @@ const getSelectedItem = items => {
   return found ? found.slug : null
 }
 
-const Experience = ({ data }) => {
+const Experience = ({ data, location }) => {
   const experiences = useMemo(() => {
     return data.allContentfulExperience.edges.map(item => {
       return item.node
@@ -47,6 +47,21 @@ const Experience = ({ data }) => {
     setSelectedItem(null)
     updateSelectedUrlState(null)
   }
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return
+    }
+
+    const func = window.addEventListener("popstate", function (event) {
+      const path = window?.history?.state?.path
+      if (path.indexOf("selected") === -1) {
+        handleReset()
+      }
+    })
+
+    return () => window.removeEventListener("popstate", func)
+  }, [])
 
   const titleContent = useMemo(() => {
     const selectedExp = experiences.find(exp => exp.slug === selectedItem)

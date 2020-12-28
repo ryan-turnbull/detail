@@ -1,11 +1,11 @@
 import "./index.css"
 
 import React from "react"
+import { Link } from "gatsby"
 
 import useScrollPosition from "@react-hook/window-scroll"
 
 import Logo from "../../assets/svg/logo.svg"
-import { Link } from "gatsby"
 
 interface LayoutProps {
   children: React.ReactNode
