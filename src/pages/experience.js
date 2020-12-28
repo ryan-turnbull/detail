@@ -54,14 +54,14 @@ const Experience = ({ data, location }) => {
     }
 
     const func = window.addEventListener("popstate", function (event) {
-      const path = window?.history?.state?.path
+      const path = window.location.pathname
       if (path.indexOf("selected") === -1) {
         handleReset()
       }
     })
 
     return () => window.removeEventListener("popstate", func)
-  }, [])
+  }, [selectedItem])
 
   const titleContent = useMemo(() => {
     const selectedExp = experiences.find(exp => exp.slug === selectedItem)
@@ -69,7 +69,7 @@ const Experience = ({ data, location }) => {
       return (
         <div className="flex flex-col items-center w-max max-w-full mx-auto">
           <div
-            className="cursor-pointer  absolute left-8 -top-28 sm:left-0 sm:-top-16"
+            className="cursor-pointer  absolute left-8 -top-20 sm:left-0 sm:-top-16"
             onClick={handleReset}
           >
             <FadeIn delay={800}>
@@ -105,7 +105,7 @@ const Experience = ({ data, location }) => {
     return (
       <div className="text-center">
         <FadeIn delay={200}>
-          <h1 className="mb-7">Recent Experience</h1>
+          <h1 className="mb-12">Recent Experience</h1>
         </FadeIn>
         <div className="flex items-center justify-center">
           {experiences.map(exp => (
