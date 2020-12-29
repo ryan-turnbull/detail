@@ -103,9 +103,7 @@ const Experience = ({ data, location }) => {
 
     return (
       <div className="text-center">
-        <FadeIn delay={200}>
-          <h1 className="mb-12">Recent Experience</h1>
-        </FadeIn>
+        <h1 className="mb-12">Recent Experience</h1>
         <div className="flex items-center justify-center">
           {experiences.map(exp => (
             <Flipped flipId={exp.slug} key={exp.slug}>
@@ -132,7 +130,11 @@ const Experience = ({ data, location }) => {
 
   return (
     <Layout
-      titleContent={<Flipper flipKey={selectedItem}>{titleContent}</Flipper>}
+      titleContent={
+        <FadeIn>
+          <Flipper flipKey={selectedItem}>{titleContent}</Flipper>
+        </FadeIn>
+      }
     >
       <SEO title="Experience" />
       {selectedItem && expContent && (

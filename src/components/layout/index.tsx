@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 import useScrollPosition from "@react-hook/window-scroll"
 
 import Logo from "../../assets/svg/logo.svg"
-import { Hamburger } from "../hamburger"
+import { Navigation } from "../nav"
 
 interface LayoutProps {
   children: React.ReactNode
@@ -15,7 +15,7 @@ interface LayoutProps {
 
 const Header = ({ menuOpen, onMenuToggle }) => {
   const scrollY = useScrollPosition(30)
-  const headerActive = scrollY > 150
+  const headerActive = scrollY > 100
   const headerBackgroundClass = headerActive
     ? "bg-white shadow-sm"
     : "layout-header-default"
@@ -27,7 +27,7 @@ const Header = ({ menuOpen, onMenuToggle }) => {
       <Link to="/">
         <Logo className="w-16 h-16" />
       </Link>
-      <Hamburger
+      <Navigation
         isOpen={menuOpen}
         onToggle={onMenuToggle}
         headerActive={headerActive}

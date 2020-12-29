@@ -41,14 +41,14 @@
 
 .nav {
   position: absolute;
-  left: -135px;
-  top: 0;
-  padding: 12px 18px;
+  right: 0;
+  top: 80px;
+  border-radius: 8px;
+  padding: 12px 28px;
   transition: background-color 0.2s ease;
 }
 .nav-backed {
   background-color: white;
-  border-radius: 8px;
 }
 
 .nav-item {
@@ -72,6 +72,15 @@
   left: 50%;
   margin-left: -12.5px;
   transition: transform 200ms;
+}
+
+.nav-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
 .hamburger-1 {
   transform: translate3d(0, -6px, 0);
