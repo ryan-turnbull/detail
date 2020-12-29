@@ -9,6 +9,7 @@ export const Hamburger = ({ isOpen, onToggle, headerActive }) => {
         <input
           type="checkbox"
           href="#"
+          checked={isOpen}
           className="menu-open"
           name="menu-open"
           id="menu-open"
