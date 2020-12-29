@@ -6,6 +6,7 @@ import { Link } from "gatsby"
 import useScrollPosition from "@react-hook/window-scroll"
 
 import Logo from "../../assets/svg/logo.svg"
+import { Hamburger } from "../hamburger"
 
 interface LayoutProps {
   children: React.ReactNode
@@ -24,6 +25,7 @@ const Header = () => {
       <Link to="/">
         <Logo className="w-16 h-16" />
       </Link>
+      <Hamburger />
     </header>
   )
 }
