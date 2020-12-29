@@ -1,5 +1,6 @@
 import { graphql } from "gatsby"
 import React, { useMemo } from "react"
+import FadeIn from "react-fade-in"
 import { Layout } from "../components/layout"
 import SEO from "../components/seo"
 import { mapNodesToArray } from "../utils/data"
@@ -35,7 +36,13 @@ const Work = ({ data }) => {
   }, [data])
 
   return (
-    <Layout titleContent={<h1>Work</h1>}>
+    <Layout
+      titleContent={
+        <FadeIn delay={200}>
+          <h1>Work</h1>
+        </FadeIn>
+      }
+    >
       <SEO title="Work" />
       <div className="max-w-2xl mx-auto pb-12">
         <p className="uppercase font-medium text-xs mb-2 text-gray-400 pl-2 sm:pl-4">

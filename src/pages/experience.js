@@ -72,7 +72,7 @@ const Experience = ({ data, location }) => {
             onClick={handleReset}
           >
             <FadeIn delay={800}>
-              <p className="text-2xl sm:text-sm">&#8592;</p>
+              <p className="text-2xl sm:text-lg">&#8592;</p>
             </FadeIn>
           </div>
           <Flipped flipId={selectedExp.slug}>

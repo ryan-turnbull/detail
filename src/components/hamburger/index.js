@@ -16,19 +16,15 @@ export const Hamburger = () => {
         <label className="menu-open-button" htmlFor="menu-open">
           <span className="hamburger hamburger-1"></span>
           <span className="hamburger hamburger-2"></span>
-          <span className="hamburger hamburger-3"></span>
         </label>
         <Link to="/contact" className="menu-item">
-          {" "}
-          <span className="fa fa-heart">C</span>{" "}
+          <span>C</span>
         </Link>
         <Link to="/experience" className="menu-item">
-          {" "}
-          <span className="fa fa-plus">E</span>{" "}
+          <span>E</span>
         </Link>
         <Link to="/work" className="menu-item">
-          {" "}
-          <span className="fa fa-bar-chart">W</span>{" "}
+          <span>W</span>
         </Link>
       </nav>
       <svg
