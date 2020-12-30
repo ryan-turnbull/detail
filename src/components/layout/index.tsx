@@ -24,7 +24,7 @@ const Header = ({ menuOpen, onMenuToggle }) => {
     <header
       className={`flex flex-row justify-between items-center w-screen fixed p-4 layout-header z-10 ${headerBackgroundClass}`}
     >
-      <Link to="/">
+      <Link to="/" aria-label="Home link">
         <Logo className="w-16 h-16" />
       </Link>
       <Navigation
