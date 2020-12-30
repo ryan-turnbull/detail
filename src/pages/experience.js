@@ -103,7 +103,7 @@ const Experience = ({ data, location }) => {
 
     return (
       <div className="text-center">
-        <h1 className="mb-12">Recent Experience</h1>
+        <h1 className="mb-12 fade-in">Recent Experience</h1>
         <div className="flex items-center justify-center">
           {experiences.map(exp => (
             <Flipped flipId={exp.slug} key={exp.slug}>

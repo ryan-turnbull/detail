@@ -38,13 +38,13 @@ const Work = ({ data }) => {
   return (
     <Layout
       titleContent={
-        <FadeIn delay={200}>
+        <FadeIn>
           <h1>Work</h1>
         </FadeIn>
       }
     >
       <SEO title="Work" />
-      <div className="max-w-2xl mx-auto pb-12">
+      <FadeIn delay={100} className="max-w-2xl mx-auto pb-12">
         <p className="uppercase font-medium text-xs mb-2 text-gray-400 pl-2 sm:pl-4">
           Featured
         </p>
@@ -78,7 +78,7 @@ const Work = ({ data }) => {
             )
           })}
         </div>
-      </div>
+      </FadeIn>
     </Layout>
   )
 }
