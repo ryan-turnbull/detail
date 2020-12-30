@@ -28,12 +28,8 @@
   }
 }
 @media (max-width: 500px) {
-  .layout-header-default {
-    /* background-color: white;
-    @apply shadow-sm; */
-  }
   .nav {
-    background-color: white;
-    @apply shadow-sm;
+    right: 60px !important;
+    top: 15px !important;
   }
 }

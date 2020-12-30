@@ -43,6 +43,7 @@
   position: absolute;
   right: 0;
   top: 80px;
+  text-align: right;
   border-radius: 8px;
   padding: 12px 28px;
   transition: background-color 0.2s ease;

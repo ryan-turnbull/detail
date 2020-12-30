@@ -5,7 +5,6 @@ import "./index.css"
 export const Navigation = ({ isOpen, onToggle, headerActive }) => {
   const linkProps = {
     className: "nav-item",
-    activeClassName: "underline",
   }
   return (
     <div>
