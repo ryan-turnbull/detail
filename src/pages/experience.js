@@ -67,13 +67,10 @@ const Experience = ({ data, location }) => {
     if (selectedExp) {
       return (
         <div className="flex flex-col items-center w-max max-w-full mx-auto">
-          <div
-            className="cursor-pointer absolute left-6 -top-20 sm:left-0 sm:-top-16"
-            onClick={handleReset}
-          >
-            <FadeIn delay={800}>
-              <p className="text-2xl sm:text-lg">&#8592;</p>
-            </FadeIn>
+          <div onClick={handleReset}>
+            <p className="cursor-pointer absolute -top-20 left-6 sm:left-0 sm:-top-16 text-2xl sm:text-lg fade-in delay-anim-500">
+              &#8592;
+            </p>
           </div>
           <Flipped flipId={selectedExp.slug}>
             <div>
@@ -132,7 +129,11 @@ const Experience = ({ data, location }) => {
 
   return (
     <Layout
-      titleContent={<Flipper flipKey={selectedItem}>{titleContent}</Flipper>}
+      titleContent={
+        <FadeIn>
+          <Flipper flipKey={selectedItem}>{titleContent}</Flipper>
+        </FadeIn>
+      }
     >
       <SEO title="Experience" />
       {selectedItem && expContent && (
