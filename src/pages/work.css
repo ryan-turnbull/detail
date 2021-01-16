@@ -1,0 +1,31 @@
+.w-full img,
+.small-work-card img {
+  border-radius: 16px;
+  transition: all 0.2s ease;
+  @apply shadow-lg;
+}
+
+.small-work-card img:hover {
+  transform: scale(1.01);
+  @apply shadow-xl;
+}
+.w-full img:hover {
+  transform: scale(1.0035);
+  @apply shadow-xl;
+}
+
+.small-work-card {
+  width: 48%;
+  margin-bottom: 16px;
+}
+.small-work-card img {
+  height: 100%;
+  width: 100%;
+}
+
+@screen sm {
+  .small-work-card {
+    width: 32%;
+    height: 250px;
+  }
+}

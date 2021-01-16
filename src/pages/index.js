@@ -1,6 +1,7 @@
 import "./index.css"
 
 import React from "react"
+import { graphql } from "gatsby"
 import FadeIn from "react-fade-in"
 
 import SEO from "../components/seo"
@@ -74,7 +75,7 @@ const IndexPage = ({ data }) => {
           </div>
         </section>
         <section className="mt-8">
-          <p className="uppercase font-medium text-xs mb-2 text-gray-500 pl-2 sm:pl-4">
+          <p className="uppercase font-medium text-xs mb-4 text-gray-500">
             Check out my latest work
           </p>
           <a

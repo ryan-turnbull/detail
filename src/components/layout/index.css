@@ -29,7 +29,7 @@
 }
 
 .layout-wrapper-menu-open {
-  transform: scale(0.95);
+  transform: scale(0.975);
   opacity: 0.35;
 }
 @media (min-width: 640px) {
