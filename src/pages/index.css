@@ -5,14 +5,13 @@
 }
 
 .illustration-backing {
-  height: 250px;
   width: 250px;
   border-radius: 24px;
-  padding: 0px;
-  padding-right: 4rem;
+  padding: 0px 2rem;
 }
 @screen sm {
   .illustration-backing {
+    height: 250px;
     background: linear-gradient(
         242.35deg,
         #ffffff 13.6%,

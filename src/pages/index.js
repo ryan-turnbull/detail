@@ -7,8 +7,8 @@ import SEO from "../components/seo"
 import { Layout } from "../components/layout"
 
 import Leaves from "../assets/svg/leaves.svg"
-import ComputerIll from "../assets/svg/computer-ill.svg"
 import PhoneIll from "../assets/svg/phone-ill.svg"
+import ComputerIll from "../assets/svg/computer-ill.svg"
 
 const IndexPage = ({ data }) => {
   const featuredItem = data?.allContentfulWork?.edges?.[0].node
@@ -38,12 +38,12 @@ const IndexPage = ({ data }) => {
         </section>
         <section className="mb-16">
           <div className="flex justify-between flex-col items-start py-6  sm:py-16 sm:flex-row sm:items-center">
-            <div className="sm:w-1/2 px-4">
+            <div className="sm:w-1/2 px-4 mx-auto">
               <figure className="illustration-backing flex justify-center items-center">
                 <ComputerIll />
               </figure>
             </div>
-            <div className="sm:w-1/2 sm:px-4">
+            <div className="sm:w-1/2 mx-auto sm:px-4">
               <h2 className="mb-4">Frontend Developer</h2>
               <p>
                 Where it all started for me. I have been building web
@@ -58,14 +58,14 @@ const IndexPage = ({ data }) => {
             <div className="sm:w-1/2 sm:px-4">
               <h2 className="mb-4">Wannabe Designer</h2>
               <p>
-                I'm a big believer that design is king, so I try to put it at
-                the forefront of my engineering process. The process of taking
+                I'm a big believer that design is king, so I try to bring it to
+                the forefront of my engineering process. The journey of taking
                 ideas from design through to development is right up my alley,
                 combining two very different skillsets to build applications
                 that look just as good as they feel.
               </p>
             </div>
-            <div className="sm:w-1/2 flex justify-end">
+            <div className="sm:w-1/2 flex justify-end mx-auto">
               <figure className="illustration-backing illustration-backing-reverse flex justify-center items-center">
                 <PhoneIll />
               </figure>
