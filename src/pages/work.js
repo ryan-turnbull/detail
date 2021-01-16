@@ -70,7 +70,7 @@ const Work = ({ data }) => {
             const { className, ...containerProps } = getWorkItemProps(workItem)
             return (
               <a
-                className={`w-1/2 ${className}`}
+                className={`w-1/3 ${className}`}
                 {...containerProps}
                 key={workItem.slug}
               >

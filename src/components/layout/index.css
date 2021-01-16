@@ -25,12 +25,12 @@
 }
 
 .layout-wrapper {
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .layout-wrapper-menu-open {
-  transform: scale(0.925);
-  filter: blur(3px);
+  transform: scale(0.95);
+  opacity: 0.35;
 }
 @media (min-width: 640px) {
   .layout-body-content {
