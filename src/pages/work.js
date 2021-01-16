@@ -45,7 +45,7 @@ const Work = ({ data }) => {
     >
       <SEO title="Work" />
       <FadeIn delay={100} className="max-w-2xl mx-auto pb-12">
-        <p className="uppercase font-medium text-xs mb-2 text-gray-400 pl-2 sm:pl-4">
+        <p className="uppercase font-medium text-xs mb-2 text-gray-500 pl-2 sm:pl-4">
           Featured
         </p>
         {featuredWork.map(workItem => {
@@ -61,7 +61,7 @@ const Work = ({ data }) => {
             </a>
           )
         })}
-        <p className="uppercase font-medium text-xs mt-12 mb-2 text-gray-400 pl-2 sm:pl-4">
+        <p className="uppercase font-medium text-xs mt-12 mb-2 text-gray-500 pl-2 sm:pl-4">
           Recent projects
         </p>
         <div className="flex flex-row flex-wrap">
