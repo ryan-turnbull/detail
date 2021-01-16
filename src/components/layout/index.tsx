@@ -5,12 +5,14 @@ import { Link } from "gatsby"
 
 import useScrollPosition from "@react-hook/window-scroll"
 
-import Logo from "../../assets/svg/logo.svg"
+import LogoLight from "../../assets/svg/logo.svg"
+import LogoDark from "../../assets/svg/logo-dark.svg"
 import { Navigation } from "../nav"
 
 interface LayoutProps {
   children: React.ReactNode
   titleContent: any
+  showFooter?: boolean
 }
 
 const Header = ({ menuOpen, onMenuToggle }) => {
@@ -22,21 +24,23 @@ const Header = ({ menuOpen, onMenuToggle }) => {
 
   return (
     <header
-      className={`flex flex-row justify-between items-center w-screen fixed p-4 layout-header z-10 ${headerBackgroundClass}`}
+      className={`w-screen fixed p-4 layout-header z-10 ${headerBackgroundClass}`}
     >
-      <Link to="/" aria-label="Home link">
-        <Logo className="w-16 h-16" />
-      </Link>
-      <Navigation
-        isOpen={menuOpen}
-        onToggle={onMenuToggle}
-        headerActive={headerActive}
-      />
+      <div className="flex flex-row justify-between items-center max-w-4xl mx-auto">
+        <Link to="/" aria-label="Home link">
+          <LogoLight className="w-16 h-16" />
+        </Link>
+        <Navigation
+          isOpen={menuOpen}
+          onToggle={onMenuToggle}
+          headerActive={headerActive}
+        />
+      </div>
     </header>
   )
 }
 
-export const Layout = ({ children, titleContent }: LayoutProps) => {
+export const Layout = ({ children, titleContent, showFooter }: LayoutProps) => {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const contentClassName = `layout-wrapper ${
@@ -46,7 +50,7 @@ export const Layout = ({ children, titleContent }: LayoutProps) => {
   return (
     <div>
       <Header menuOpen={menuOpen} onMenuToggle={() => setMenuOpen(o => !o)} />
-      <main>
+      <main className="layout-main">
         <div className="layout-title-content flex justify-center items-center pt-48 sm:pt-0">
           <div
             className={`max-w-xl w-screen text-center mx-auto relative px-6 ${contentClassName}`}
@@ -58,6 +62,18 @@ export const Layout = ({ children, titleContent }: LayoutProps) => {
           {children}
         </div>
       </main>
+      {showFooter && (
+        <footer className="h-44 sm:h-56 bg-blue-50">
+          <div className="flex flex-row items-center justify-between max-w-4xl px-4 mx-auto h-full">
+            <nav className="footer-nav">
+              <Link to="/work">Work</Link>
+              <Link to="/experience">Experience</Link>
+              <Link to="/contact">Contact</Link>
+            </nav>
+            <LogoDark className="h-16 w-16" />
+          </div>
+        </footer>
+      )}
     </div>
   )
 }

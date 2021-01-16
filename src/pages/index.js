@@ -15,6 +15,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout
+      showFooter
       titleContent={
         <FadeIn>
           <div className="flex items-center justify-center">
@@ -27,7 +28,7 @@ const IndexPage = ({ data }) => {
       }
     >
       <SEO title="Home" />
-      <FadeIn delay={300} className="mx-auto max-w-3xl pb-24">
+      <FadeIn delay={300} className="mx-auto max-w-4xl pb-24">
         <section className="mb-16">
           <p className="max-w-xl mx-auto mt-32 text-center sm:my-16">
             I’m a passionate engineer who enjoys building products that make an

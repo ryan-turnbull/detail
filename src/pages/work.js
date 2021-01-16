@@ -37,6 +37,7 @@ const Work = ({ data }) => {
 
   return (
     <Layout
+      showFooter
       titleContent={
         <FadeIn>
           <h1>Work</h1>
@@ -44,7 +45,7 @@ const Work = ({ data }) => {
       }
     >
       <SEO title="Work" />
-      <FadeIn delay={100} className="max-w-2xl mx-auto pb-12">
+      <FadeIn delay={100} className="max-w-4xl mx-auto pb-12">
         <p className="uppercase font-medium text-xs mb-2 text-gray-500 pl-2 sm:pl-4">
           Featured
         </p>

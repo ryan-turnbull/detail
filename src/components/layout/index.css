@@ -8,6 +8,9 @@
     @apply min-h-screen;
   }
 }
+.layout-main {
+  min-height: calc(100vh - 11rem);
+}
 
 .layout-body-content {
   margin-top: 80px;
@@ -38,5 +41,30 @@
   .nav {
     right: 60px !important;
     top: 15px !important;
+  }
+}
+
+.footer-nav a {
+  font-size: 20px;
+  vertical-align: center;
+  font-family: "Neuton";
+}
+.footer-nav a:not(:last-of-type) {
+  margin-right: 16px;
+  padding-right: 16px;
+  border-right: 1px solid #aaaaaa;
+}
+
+@media (max-width: 500px) {
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-nav a {
+    padding: 8px 0;
+  }
+  .footer-nav a:not(:last-of-type) {
+    margin-right: 0px;
+    border-right: none;
   }
 }

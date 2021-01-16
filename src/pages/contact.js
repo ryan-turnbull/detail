@@ -15,7 +15,7 @@ export const Contact = () => {
         <FadeIn delay={100}>
           <h1>Contact</h1>
           <div className="mt-8">
-            <div className="flex justify-between items-center max-w-xs mx-auto">
+            <div className="flex justify-between items-center max-w-xs mx-auto px-8">
               <a
                 className="contact-logo"
                 target="_blank"
