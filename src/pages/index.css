@@ -1,1 +1,51 @@
+.home-page-leaves {
+  position: absolute;
+  top: 10px;
+  left: -100px;
+}
 
+.illustration-backing {
+  height: 250px;
+  width: 250px;
+  border-radius: 24px;
+  padding: 0px;
+  padding-right: 4rem;
+}
+@screen sm {
+  .illustration-backing {
+    background: linear-gradient(
+        242.35deg,
+        #ffffff 13.6%,
+        rgba(255, 255, 255, 0) 82.18%
+      ),
+      #edf8ff;
+    padding: 2rem;
+  }
+  .illustration-backing-reverse {
+    background: linear-gradient(
+        117.65deg,
+        #ffffff 13.6%,
+        rgba(255, 255, 255, 0) 82.18%
+      ),
+      #edf8ff;
+    margin-left: 0px;
+  }
+}
+
+.illustration-backing-reverse {
+  padding: 0px;
+  margin: -16px;
+}
+
+.contact-logo svg {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.contact-logo:last-of-type svg {
+  padding: 4px;
+  border-radius: 8px;
+  @apply shadow-md;
+}

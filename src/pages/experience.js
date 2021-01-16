@@ -141,9 +141,9 @@ const Experience = ({ data, location }) => {
           <div className="max-w-xl mx-auto pb-24">
             <h2 className="my-4">Overview</h2>
             {renderRichText(expContent.overview)}
-            <h2 className="my-4">Outcomes & Responsibilities</h2>
+            <h2 className="my-4 mt-10">Outcomes & Responsibilities</h2>
             {renderRichText(expContent.outcomesResponsibilities)}
-            <h2 className="my-4">Technology</h2>
+            <h2 className="my-4 mt-10">Technology</h2>
             {renderRichText(expContent.technology)}
           </div>
         </FadeIn>

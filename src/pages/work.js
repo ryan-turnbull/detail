@@ -62,7 +62,7 @@ const Work = ({ data }) => {
           )
         })}
         <p className="uppercase font-medium text-xs mt-12 mb-2 text-gray-400 pl-2 sm:pl-4">
-          Other
+          Recent projects
         </p>
         <div className="flex flex-row flex-wrap">
           {otherWork.map(workItem => {

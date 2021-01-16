@@ -7,6 +7,11 @@
   font-weight: 700;
   src: url("../assets/fonts/gilroy/Gilroy.otf") format("opentype");
 }
+@font-face {
+  font-family: "Neuton";
+  font-weight: 300;
+  src: url("../assets/fonts/neuton/Neuton.ttf") format("truetype");
+}
 
 body {
   margin: 0;
@@ -22,6 +27,17 @@ h2 {
   font-size: 24px;
   font-weight: 700;
   font-family: Gilroy;
+}
+
+p,
+span {
+  font-size: 20px;
+  line-height: 30px;
+  font-family: "Neuton";
+}
+
+p.uppercase {
+  font-family: inherit;
 }
 
 ul {
