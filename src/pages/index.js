@@ -43,24 +43,26 @@ const IndexPage = ({ data }) => {
                 <ComputerIll />
               </figure>
             </div>
-            <div className="sm:w-1/2 px-4">
+            <div className="sm:w-1/2 sm:px-4">
               <h2 className="mb-4">Frontend Developer</h2>
               <p>
-                I’m a passionate engineer who enjoys building products that make
-                an impact on people’s lives. I enjoy the technical challenge
-                that building software brings, and how the tools we use are
-                constantly changing and improving.
+                Where it all started for me. I have been building web
+                experiences for roughly 5 years, ranging from simple brochure
+                sites to complex web apps. Whatever it is, I stress over the
+                details and strive to bring a bit of magic to the web with
+                everything I do, while always looking for ways to improve.
               </p>
             </div>
           </div>
           <div className="flex justify-between flex-col-reverse items-start py-6 sm:py-16 sm:flex-row sm:items-center">
-            <div className="sm:w-1/2 px-4">
+            <div className="sm:w-1/2 sm:px-4">
               <h2 className="mb-4">Wannabe Designer</h2>
               <p>
-                I’m a passionate engineer who enjoys building products that make
-                an impact on people’s lives. I enjoy the technical challenge
-                that building software brings, and how the tools we use are
-                constantly changing and improving.
+                I'm a big believer that design is king, so I try to put it at
+                the forefront of my engineering process. The process of taking
+                ideas from design through to development is right up my alley,
+                combining two very different skillsets to build applications
+                that look just as good as they feel.
               </p>
             </div>
             <div className="sm:w-1/2 flex justify-end">
@@ -71,7 +73,7 @@ const IndexPage = ({ data }) => {
           </div>
         </section>
         <section className="mt-8">
-          <p className="uppercase font-medium text-xs mb-2 text-gray-400">
+          <p className="uppercase font-medium text-xs mb-2 text-gray-400 pl-2 sm:pl-4">
             Check out my latest work
           </p>
           <a

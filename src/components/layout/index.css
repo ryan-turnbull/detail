@@ -1,5 +1,12 @@
 .layout-title-content {
+  min-height: 50vh;
+
   background: linear-gradient(180deg, #edf8ff 0%, #ffffff 100%);
+}
+@screen sm {
+  .layout-title-content {
+    @apply min-h-screen;
+  }
 }
 
 .layout-body-content {

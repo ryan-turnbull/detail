@@ -47,7 +47,7 @@ export const Layout = ({ children, titleContent }: LayoutProps) => {
     <div>
       <Header menuOpen={menuOpen} onMenuToggle={() => setMenuOpen(o => !o)} />
       <main>
-        <div className="layout-title-content flex justify-center items-center pt-48 sm:min-h-screen sm:pt-0">
+        <div className="layout-title-content flex justify-center items-center pt-48 sm:pt-0">
           <div
             className={`max-w-xl w-screen text-center mx-auto relative px-6 ${contentClassName}`}
           >
