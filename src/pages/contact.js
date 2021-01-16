@@ -16,8 +16,8 @@ export const Contact = () => {
           <h1>Contact</h1>
           <div>
             <p className="max-w-xs mx-auto mt-8 mb-12">
-              Feel free to shoot me an email for any enquires around
-              contracting, my prevous work, or just to say hi
+              Feel free to shoot me an email for any questions about anything
+              you see here, or just to say hi
             </p>
             <div className="flex justify-between items-center max-w-xs mx-auto px-8">
               <a
