@@ -41,7 +41,7 @@ export const Contact = () => {
                 <EmailLogo />
               </a>
             </div>
-            <p className="text-center mt-12">043 206 2027</p>
+            {/* <p className="text-center mt-12">043 206 2027</p> */}
           </div>
         </FadeIn>
       }
