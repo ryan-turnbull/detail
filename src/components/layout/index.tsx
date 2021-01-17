@@ -64,7 +64,7 @@ export const Layout = ({ children, titleContent, showFooter }: LayoutProps) => {
       </main>
       {showFooter && (
         <footer className="h-44 sm:h-56 bg-blue-50 px-6">
-          <div className="flex flex-row items-center justify-between max-w-4xl mx-auto h-full">
+          <div className="flex flex-row items-center justify-between max-w-3xl mx-auto h-full">
             <nav className="footer-nav">
               <Link to="/work">Work</Link>
               <Link to="/experience">Experience</Link>
