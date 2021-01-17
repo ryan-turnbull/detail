@@ -26,7 +26,7 @@ const Header = ({ menuOpen, onMenuToggle }) => {
     <header
       className={`w-screen fixed p-4 layout-header z-10 ${headerBackgroundClass}`}
     >
-      <div className="flex flex-row justify-between items-center max-w-4xl mx-auto">
+      <div className="flex flex-row justify-between items-center max-w-3xl mx-auto">
         <Link to="/" aria-label="Home link">
           <LogoLight className="w-16 h-16" />
         </Link>
@@ -58,7 +58,7 @@ export const Layout = ({ children, titleContent, showFooter }: LayoutProps) => {
             {titleContent}
           </div>
         </div>
-        <div className={`layout-body-content px-6 ${contentClassName}`}>
+        <div className={`layout-body-content px-4 ${contentClassName}`}>
           {children}
         </div>
       </main>

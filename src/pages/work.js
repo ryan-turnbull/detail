@@ -1,4 +1,4 @@
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import React, { useMemo } from "react"
 import FadeIn from "react-fade-in"
 import "./work.css"
@@ -19,6 +19,30 @@ const getWorkItemProps = item => {
       }
 }
 
+const WorkItem = ({ workItem }) => {
+  const { className, ...containerProps } = getWorkItemProps(workItem)
+  return workItem.description ? (
+    <Link
+      className={`${className} small-work-card`}
+      to={`/work/${workItem.slug}`}
+    >
+      {workItem.image && (
+        <img src={workItem.image.file.url} alt={workItem.name} />
+      )}{" "}
+    </Link>
+  ) : (
+    <a
+      className={`${className} small-work-card`}
+      {...containerProps}
+      key={workItem.slug}
+    >
+      {workItem.image && (
+        <img src={workItem.image.file.url} alt={workItem.name} />
+      )}
+    </a>
+  )
+}
+
 const Work = ({ data }) => {
   const [featuredWork, recentWork, otherWork] = useMemo(() => {
     const items = mapNodesToArray("allContentfulWork", data)
@@ -31,7 +55,7 @@ const Work = ({ data }) => {
       if (item.featured) {
         featuredWork.unshift(item)
       } else if (item.recent) {
-        recentWork.unshift(item)
+        recentWork.push(item)
       } else {
         otherWork.unshift(item)
       }
@@ -54,52 +78,24 @@ const Work = ({ data }) => {
         <p className="uppercase font-medium text-xs mb-4 text-gray-500">
           Featured
         </p>
-        {featuredWork.map(workItem => {
-          const { className, ...containerProps } = getWorkItemProps(workItem)
-
-          return (
-            <a
-              className={`w-full ${className}`}
-              {...containerProps}
-              key={workItem.slug}
-            >
-              <img src={workItem.image.file.url} alt={workItem.name} />
-            </a>
-          )
-        })}
+        {featuredWork.map(workItem => (
+          <WorkItem workItem={workItem} />
+        ))}
         <p className="uppercase font-medium text-xs mt-12 mb-4 text-gray-500">
           Recent projects
         </p>
         <div className="flex flex-row flex-wrap justify-between">
-          {recentWork.map(workItem => {
-            const { className, ...containerProps } = getWorkItemProps(workItem)
-            return (
-              <a
-                className={`${className} small-work-card`}
-                {...containerProps}
-                key={workItem.slug}
-              >
-                <img src={workItem.image.file.url} alt={workItem.name} />
-              </a>
-            )
-          })}
+          {recentWork.map(workItem => (
+            <WorkItem workItem={workItem} />
+          ))}
         </div>
         <p className="uppercase font-medium text-xs mt-12 mb-4 text-gray-500">
           Other
         </p>
         <div className="flex flex-row flex-wrap justify-between">
-          {otherWork.map(workItem => {
-            const { className, ...containerProps } = getWorkItemProps(workItem)
-            return (
-              <a
-                className={`${className} small-work-card`}
-                {...containerProps}
-                key={workItem.slug}
-              >
-                <img src={workItem.image.file.url} alt={workItem.name} />
-              </a>
-            )
-          })}
+          {otherWork.map(workItem => (
+            <WorkItem workItem={workItem} />
+          ))}
         </div>
       </FadeIn>
     </Layout>
@@ -116,6 +112,9 @@ export const pageQuery = graphql`
             file {
               url
             }
+          }
+          description {
+            description
           }
           featured
           recent

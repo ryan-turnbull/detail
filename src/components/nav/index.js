@@ -7,7 +7,7 @@ export const Navigation = ({ isOpen, onToggle, headerActive }) => {
     className: "nav-item",
   }
   return (
-    <div class="sm:relative">
+    <div className="sm:relative">
       <div className="menu">
         <input
           type="checkbox"

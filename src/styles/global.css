@@ -15,6 +15,8 @@
 
 body {
   margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
@@ -34,6 +36,19 @@ span {
   font-size: 20px;
   line-height: 30px;
   font-family: "Neuton";
+}
+
+button {
+  font-family: "Neuton";
+  background-color: white;
+  border-radius: 8px;
+  padding: 4px 12px;
+  transition: transform 0.15s ease;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+}
+button:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
 }
 
 p.uppercase {
