@@ -52,19 +52,11 @@ const richTextOptions = {
 }
 
 export const WorkItem = ({ pathContext }) => {
-  const { logo, name, description, what, link } = pathContext
+  const { name, description, what, link } = pathContext
 
   const titleContent = () => (
     <FadeIn className="flex flex-col items-center">
-      {logo && logo.file ? (
-        <img
-          className="h-14 w-14 mx-auto"
-          src={logo.file.url}
-          alt={`${name} logo`}
-        />
-      ) : (
-        <h2>{name}</h2>
-      )}
+      <h2>{name}</h2>
       <p className="my-8">{description.description}</p>
       <button>
         <a href={link} target="_blank" rel="noopener noreferrer">

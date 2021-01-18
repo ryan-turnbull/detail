@@ -74,7 +74,7 @@ const Work = ({ data }) => {
       }
     >
       <SEO title="Work" />
-      <FadeIn delay={100} className="max-w-4xl mx-auto pb-12">
+      <FadeIn delay={100} className="max-w-3xl mx-auto pb-12">
         <p className="uppercase font-medium text-xs mb-4 text-gray-500">
           Featured
         </p>
