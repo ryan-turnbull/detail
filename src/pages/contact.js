@@ -1,5 +1,6 @@
 import React from "react"
 import FadeIn from "react-fade-in/lib/FadeIn"
+import { OutboundLink } from "gatsby-plugin-amplitude-analytics"
 
 import SEO from "../components/seo"
 import { Layout } from "../components/layout"
@@ -20,30 +21,30 @@ export const Contact = () => {
               you see here, or just to say hi
             </p>
             <div className="flex justify-between items-center max-w-xs mx-auto px-8">
-              <a
+              <OutboundLink
                 className="contact-logo"
                 target="_blank"
                 href="https://github.com/ryan-turnbull"
                 rel="noopener noreferrer"
               >
                 <GithubLogo />
-              </a>
-              <a
+              </OutboundLink>
+              <OutboundLink
                 className="contact-logo"
                 href="https://www.linkedin.com/in/ryan-turnbull-profile/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <LinkedinLogo />
-              </a>
-              <a
+              </OutboundLink>
+              <OutboundLink
                 className="contact-logo"
                 target="_blank"
                 rel="noopener noreferrer"
                 href="mailto:ryanturnbullemail@gmail.com"
               >
                 <EmailLogo />
-              </a>
+              </OutboundLink>
             </div>
             {/* <p className="text-center mt-12">043 206 2027</p> */}
           </div>

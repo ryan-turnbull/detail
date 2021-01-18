@@ -1,6 +1,8 @@
 import { graphql, Link } from "gatsby"
 import React, { useMemo } from "react"
 import FadeIn from "react-fade-in"
+import { OutboundLink } from "gatsby-plugin-amplitude-analytics"
+
 import "./work.css"
 
 import { Layout } from "../components/layout"
@@ -31,7 +33,7 @@ const WorkItem = ({ workItem }) => {
       )}{" "}
     </Link>
   ) : (
-    <a
+    <OutboundLink
       className={`${className} small-work-card`}
       {...containerProps}
       key={workItem.slug}
@@ -39,7 +41,7 @@ const WorkItem = ({ workItem }) => {
       {workItem.image && (
         <img src={workItem.image.file.url} alt={workItem.name} />
       )}
-    </a>
+    </OutboundLink>
   )
 }
 
