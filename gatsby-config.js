@@ -39,6 +39,24 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-amplitude-analytics`,
+      options: {
+        apiKey: "7ced7665ba3e3616b2af3a0645450a3e",
+        head: false,
+        respectDNT: true,
+        eventTypes: {
+          outboundLinkClick: "OUTBOUND_LINK_CLICK",
+          pageView: "PAGE_VIEW",
+        },
+        amplitudeConfig: {
+          saveEvents: true,
+          includeUtm: true,
+          includeReferrer: true,
+        },
+        environments: ["production"],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
