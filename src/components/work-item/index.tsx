@@ -5,6 +5,7 @@ import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { Layout } from "../layout"
 import SEO from "../seo"
 import FadeIn from "react-fade-in"
+import { OutboundLink } from "gatsby-plugin-amplitude-analytics"
 
 const richTextOptions = {
   renderNode: {
@@ -59,9 +60,9 @@ export const WorkItem = ({ pathContext }) => {
       <h2>{name}</h2>
       <p className="my-8">{description.description}</p>
       <button>
-        <a href={link} target="_blank" rel="noopener noreferrer">
+        <OutboundLink href={link} target="_blank" rel="noopener noreferrer">
           Check it out
-        </a>
+        </OutboundLink>
       </button>
       <hr />
     </FadeIn>
