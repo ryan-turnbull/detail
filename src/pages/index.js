@@ -11,6 +11,7 @@ import PhoneIll from "../assets/svg/phone-ill.svg"
 import ComputerIll from "../assets/svg/computer-ill.svg"
 
 import tableImg from "../assets/images/table-hero.png"
+import { OutboundLink } from "gatsby-plugin-amplitude-analytics"
 
 const IndexPage = ({ data }) => {
   const featuredItem = data?.allContentfulWork?.edges?.[0].node
@@ -78,7 +79,7 @@ const IndexPage = ({ data }) => {
           <p className="uppercase font-medium text-xs mb-4 text-gray-500">
             Check out my latest work
           </p>
-          <a
+          <OutboundLink
             className="w-full cursor-pointer"
             key={featuredItem.slug}
             href={featuredItem.link}
@@ -86,7 +87,7 @@ const IndexPage = ({ data }) => {
             rel="noopener noreferrer"
           >
             <img src={featuredItem.image.file.url} alt={featuredItem.name} />
-          </a>
+          </OutboundLink>
         </section>
       </FadeIn>
     </Layout>

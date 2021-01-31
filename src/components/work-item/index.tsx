@@ -23,14 +23,14 @@ const richTextOptions = {
         ({ value, nodeType, data, ...other }) => {
           if (!value && nodeType === "hyperlink") {
             return (
-              <a
+              <OutboundLink
                 className="font-bold text-blue-600 mb-3 block"
                 href={data.uri}
                 target="_blank"
                 key={data.uri}
               >
                 View Demo
-              </a>
+              </OutboundLink>
             )
           }
           const paragraphs = value.split("\n").map((item, index) => {
