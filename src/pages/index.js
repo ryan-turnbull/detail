@@ -7,9 +7,10 @@ import FadeIn from "react-fade-in"
 import SEO from "../components/seo"
 import { Layout } from "../components/layout"
 
-import Leaves from "../assets/svg/leaves.svg"
 import PhoneIll from "../assets/svg/phone-ill.svg"
 import ComputerIll from "../assets/svg/computer-ill.svg"
+
+import tableImg from "../assets/images/table-hero.png"
 
 const IndexPage = ({ data }) => {
   const featuredItem = data?.allContentfulWork?.edges?.[0].node
@@ -17,19 +18,18 @@ const IndexPage = ({ data }) => {
   return (
     <Layout
       showFooter
+      titleWrapperClassName="border-b-8 border-blue-900 border-opacity-10"
       titleContent={
-        <FadeIn>
-          <div className="flex items-center justify-center">
-            <h1 className="relative">
-              Hi, I'm Ryan
-              <Leaves className="home-page-leaves" />
-            </h1>
-          </div>
+        <FadeIn delay={125} className="max-w-4xl max-h-screen mt-16">
+          <h1 className="text-center relative -top-8 sm:top-20">
+            Hi, I'm Ryan
+          </h1>
+          <img src={tableImg} alt="Home hero of work desk" />
         </FadeIn>
       }
     >
       <SEO title="Home" />
-      <FadeIn delay={300} className="mx-auto max-w-3xl pb-24">
+      <FadeIn delay={300} className="mx-auto max-w-3xl pb-24 sm:py-24">
         <section className="mb-16">
           <p className="max-w-xl mx-auto mt-32 text-center sm:my-16">
             I’m a passionate engineer who enjoys building products that make an

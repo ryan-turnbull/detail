@@ -12,6 +12,7 @@ import { Navigation } from "../nav"
 interface LayoutProps {
   children: React.ReactNode
   titleContent: any
+  titleWrapperClassName?: string
   showFooter?: boolean
 }
 
@@ -26,9 +27,9 @@ const Header = ({ menuOpen, onMenuToggle }) => {
     <header
       className={`w-screen fixed p-4 layout-header z-10 ${headerBackgroundClass}`}
     >
-      <div className="flex flex-row justify-between items-center max-w-3xl mx-auto">
+      <div className="flex flex-row justify-between items-center max-w-4xl mx-auto">
         <Link to="/" aria-label="Home link">
-          <LogoLight className="w-16 h-16" />
+          <LogoDark className="w-16 h-16" />
         </Link>
         <Navigation
           isOpen={menuOpen}
@@ -40,7 +41,12 @@ const Header = ({ menuOpen, onMenuToggle }) => {
   )
 }
 
-export const Layout = ({ children, titleContent, showFooter }: LayoutProps) => {
+export const Layout = ({
+  children,
+  titleContent,
+  titleWrapperClassName,
+  showFooter,
+}: LayoutProps) => {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const contentClassName = `layout-wrapper ${
@@ -53,7 +59,11 @@ export const Layout = ({ children, titleContent, showFooter }: LayoutProps) => {
       <main className="layout-main">
         <div className="layout-title-content flex justify-center items-center pt-48 sm:pt-0">
           <div
-            className={`max-w-xl w-screen text-center mx-auto relative px-6 ${contentClassName}`}
+            className={
+              titleWrapperClassName
+                ? `${titleWrapperClassName} ${contentClassName}`
+                : `max-w-xl w-screen text-center mx-auto relative px-6 ${contentClassName}`
+            }
           >
             {titleContent}
           </div>

@@ -81,14 +81,14 @@ const Work = ({ data }) => {
           Featured
         </p>
         {featuredWork.map(workItem => (
-          <WorkItem workItem={workItem} />
+          <WorkItem key={workItem.id} workItem={workItem} />
         ))}
         <p className="uppercase font-medium text-xs mt-12 mb-4 text-gray-500">
           Recent projects
         </p>
         <div className="flex flex-row flex-wrap justify-between">
           {recentWork.map(workItem => (
-            <WorkItem workItem={workItem} />
+            <WorkItem key={workItem.id} workItem={workItem} />
           ))}
         </div>
         <p className="uppercase font-medium text-xs mt-12 mb-4 text-gray-500">
@@ -96,7 +96,7 @@ const Work = ({ data }) => {
         </p>
         <div className="flex flex-row flex-wrap justify-between">
           {otherWork.map(workItem => (
-            <WorkItem workItem={workItem} />
+            <WorkItem key={workItem.id} workItem={workItem} />
           ))}
         </div>
       </FadeIn>

@@ -41,15 +41,27 @@
 
 .nav {
   position: absolute;
-  right: 0;
-  top: 80px;
+  right: 60px;
+  top: 0px;
   text-align: right;
   border-radius: 8px;
   padding: 12px 28px;
+  display: flex;
   transition: background-color 0.2s ease;
 }
-.nav-backed {
-  background-color: white;
+
+@media (max-width: 640px) {
+  .nav {
+    flex-direction: column;
+  }
+  .nav-item {
+    margin-right: 0px !important;
+    padding: 12px 0;
+  }
+  .nav-backed {
+    background-color: white;
+    @apply shadow-sm;
+  }
 }
 
 .nav-item {
@@ -57,10 +69,12 @@
   display: block;
   opacity: 0;
   font-size: 18px;
-  padding: 12px 0;
   font-family: "Gilroy";
   animation: entryanim 0.3s ease forwards;
   animation-delay: calc(0.1s * var(--index));
+}
+.nav-item:not(:last-of-type) {
+  margin-right: 32px;
 }
 
 .hamburger {

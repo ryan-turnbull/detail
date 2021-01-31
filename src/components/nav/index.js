@@ -29,7 +29,7 @@ export const Navigation = ({ isOpen, onToggle, headerActive }) => {
       </div>
       {isOpen && (
         <>
-          <nav className={`nav ${headerActive ? "nav-backed shadow-sm" : ""}`}>
+          <nav className={`nav ${headerActive ? "nav-backed" : ""}`}>
             <Link
               {...linkProps}
               to="/work"

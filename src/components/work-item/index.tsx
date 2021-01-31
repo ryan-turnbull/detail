@@ -20,13 +20,13 @@ const richTextOptions = {
     [BLOCKS.PARAGRAPH]: node => {
       const content = node.content.map(
         ({ value, nodeType, data, ...other }) => {
-          console.log(value, other)
           if (!value && nodeType === "hyperlink") {
             return (
               <a
                 className="font-bold text-blue-600 mb-3 block"
                 href={data.uri}
                 target="_blank"
+                key={data.uri}
               >
                 View Demo
               </a>

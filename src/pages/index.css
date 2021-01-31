@@ -29,11 +29,19 @@
       #edf8ff;
     margin-left: 0px;
   }
+  .illustration-backing svg {
+    max-height: 175px;
+    margin-bottom: 0px;
+  }
+}
+
+.illustration-backing svg {
+  max-height: 150px;
+  margin-bottom: 24px;
 }
 
 .illustration-backing-reverse {
   padding: 0px;
-  margin: -16px;
 }
 
 .contact-logo svg {
