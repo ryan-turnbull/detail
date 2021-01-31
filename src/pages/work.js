@@ -21,11 +21,13 @@ const getWorkItemProps = item => {
       }
 }
 
-const WorkItem = ({ workItem }) => {
+const WorkItem = ({ workItem, featured }) => {
   const { className, ...containerProps } = getWorkItemProps(workItem)
   return workItem.description ? (
     <Link
-      className={`${className} small-work-card`}
+      className={`${className} small-work-card ${
+        featured ? "featured-work-card" : ""
+      }`}
       to={`/work/${workItem.slug}`}
     >
       {workItem.image && (
@@ -81,7 +83,7 @@ const Work = ({ data }) => {
           Featured
         </p>
         {featuredWork.map(workItem => (
-          <WorkItem key={workItem.id} workItem={workItem} />
+          <WorkItem key={workItem.id} workItem={workItem} featured />
         ))}
         <p className="uppercase font-medium text-xs mt-12 mb-4 text-gray-500">
           Recent projects
