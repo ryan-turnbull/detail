@@ -17,10 +17,11 @@
 @screen sm {
   .hero-title {
     position: absolute;
-    top: 50%;
+    top: calc(50% - 30px);
     left: 50%;
     font-size: 24px;
     color: white;
+    transition: all 0.3s ease;
     transform: translate(-50%, calc(-50% - 40px));
   }
   .illustration-backing {

@@ -52,10 +52,6 @@ const Experience = ({ data, location, ...other }) => {
       return
     }
 
-    window.addEventListener("hashchange", () => {
-      console.log("yo")
-    })
-
     const func = window.addEventListener("popstate", function (event) {
       const path = window.location.pathname
       if (path.indexOf("selected") === -1) {
