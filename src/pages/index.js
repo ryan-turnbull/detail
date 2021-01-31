@@ -20,9 +20,9 @@ const IndexPage = ({ data }) => {
       showFooter
       titleWrapperClassName="border-b-8 border-blue-900 border-opacity-10"
       titleContent={
-        <FadeIn delay={125} className="max-w-4xl max-h-screen mt-16">
-          <h1 className="text-center relative -top-8 sm:top-20">
-            Hi, I'm Ryan.
+        <FadeIn className="max-w-4xl max-h-screen mt-16">
+          <h1 className="text-center relative -top-8 hero-title fade-in delay-anim-1000">
+            Hello!
           </h1>
           <img src={tableImg} alt="Home hero of work desk" />
         </FadeIn>

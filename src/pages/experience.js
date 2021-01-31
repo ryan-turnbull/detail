@@ -30,7 +30,7 @@ const getSelectedItem = items => {
   return found ? found.slug : null
 }
 
-const Experience = ({ data, location }) => {
+const Experience = ({ data, location, ...other }) => {
   const experiences = useMemo(() => {
     return mapNodesToArray("allContentfulExperience", data)
   }, [data])
@@ -51,6 +51,10 @@ const Experience = ({ data, location }) => {
     if (typeof window === "undefined") {
       return
     }
+
+    window.addEventListener("hashchange", () => {
+      console.log("yo")
+    })
 
     const func = window.addEventListener("popstate", function (event) {
       const path = window.location.pathname

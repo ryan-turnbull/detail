@@ -9,7 +9,20 @@
   border-radius: 24px;
   padding: 0px 2rem;
 }
+@media (max-width: 500px) {
+  .hero-title {
+    animation-delay: 0 !important;
+  }
+}
 @screen sm {
+  .hero-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 24px;
+    color: white;
+    transform: translate(-50%, calc(-50% - 40px));
+  }
   .illustration-backing {
     height: 250px;
     background: linear-gradient(
