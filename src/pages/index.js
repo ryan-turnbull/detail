@@ -22,7 +22,7 @@ const IndexPage = ({ data }) => {
       titleContent={
         <FadeIn delay={125} className="max-w-4xl max-h-screen mt-16">
           <h1 className="text-center relative -top-8 sm:top-20">
-            Hi, I'm Ryan
+            Hi, I'm Ryan.
           </h1>
           <img src={tableImg} alt="Home hero of work desk" />
         </FadeIn>
